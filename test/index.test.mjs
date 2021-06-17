@@ -4,6 +4,7 @@ import 'chai/register-expect.js';
 describe('pronounceWord', () => {
 	const quenyaTestCases = [
 		['E|ä', 'ˈeɑ'],
+		['E|ru', 'ˈeru'],
 	];
 	const sindarinTestCases = [
 	];

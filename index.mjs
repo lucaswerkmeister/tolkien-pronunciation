@@ -23,6 +23,13 @@ export function pronounceWord(analysedWord, language) {
 		case 'ä':
 			ipa += 'ɑ';
 			break;
+		case 'u':
+		case 'ü':
+			ipa += 'u';
+			break;
+		case 'r':
+			ipa += 'r';
+			break;
 		default:
 			throw new Error(`Unknown letter ${letter}!`);
 		}
