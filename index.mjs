@@ -1,8 +1,33 @@
 import { analyseText } from 'tolkien-stress/index.mjs';
 
 // eslint-disable-next-line no-unused-vars
-export function pronounceWord(word, language) {
-	return `/${word.word}/`;
+export function pronounceWord(analysedWord, language) {
+	const { word, syllableBreaks, stressedSyllable } = analysedWord;
+	let ipa = '';
+	let currentSyllable = 0;
+
+	for (let i = 0; i < word.length; i++) {
+		const letter = word[i].toLowerCase();
+		if (i === syllableBreaks[currentSyllable]) {
+			if (currentSyllable === stressedSyllable) {
+				ipa += 'ˈ';
+			}
+			currentSyllable++;
+		}
+		switch (letter) {
+		case 'e':
+		case 'ë':
+			ipa += 'e';
+			break;
+		case 'a':
+		case 'ä':
+			ipa += 'ɑ';
+			break;
+		default:
+			throw new Error(`Unknown letter ${letter}!`);
+		}
+	}
+	return ipa;
 }
 
 export function pronounceText(text, language) {
