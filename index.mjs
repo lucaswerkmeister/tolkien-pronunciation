@@ -25,6 +25,16 @@ export function pronounceWord(analysedWord, language) {
 		case 'ä':
 			ipa += 'ɑ';
 			break;
+		case 'á':
+			ipa += 'ɑː';
+			break;
+		case 'â':
+			if (sindarin) {
+				ipa += 'ɑːː';
+			} else {
+				throw new Error(`Unknown letter ${letter}!`);
+			}
+			break;
 		case 'b':
 			// not explicitly stated in Appendix E,
 			// presumably considered obvious
@@ -48,8 +58,21 @@ export function pronounceWord(analysedWord, language) {
 			break;
 		case 'e':
 		case 'ë':
-			ipa += 'e';
+			ipa += 'ɛ';
 			break;
+		case 'é':
+			if (quenya) {
+				ipa += 'eː';
+			} else {
+				ipa += 'ɛː';
+			}
+			break;
+		case 'ê':
+			if (sindarin) {
+				ipa += 'ɛːː';
+			} else {
+				throw new Error(`Unknown letter ${letter}!`);
+			}
 		case 'f':
 			if (nextLetter === undefined) {
 				ipa += 'v';
@@ -88,6 +111,16 @@ export function pronounceWord(analysedWord, language) {
 				ipa += 'i';
 			}
 			break;
+		case 'í':
+			ipa += 'iː';
+			break;
+		case 'î':
+			if (sindarin) {
+				ipa += 'iːː';
+			} else {
+				throw new Error(`Unknown letter ${letter}!`);
+			}
+			break;
 		// J and K do not occur in Elvish languages
 		case 'l':
 			if (nextLetter === 'h') {
@@ -118,6 +151,20 @@ export function pronounceWord(analysedWord, language) {
 		case 'o':
 		case 'ö':
 			ipa += 'ɔ';
+			break;
+		case 'ó':
+			if (quenya) {
+				ipa += 'oː';
+			} else {
+				ipa += 'ɔː';
+			}
+			break;
+		case 'ô':
+			if (sindarin) {
+				ipa += 'ɔːː';
+			} else {
+				throw new Error(`Unknown letter ${letter}!`);
+			}
 			break;
 		case 'p':
 			if (nextLetter === 'h') {
@@ -162,6 +209,16 @@ export function pronounceWord(analysedWord, language) {
 			break;
 		case 'u':
 			ipa += 'u';
+			break;
+		case 'ú':
+			ipa += 'uː';
+			break;
+		case 'û':
+			if (sindarin) {
+				ipa += 'uːː';
+			} else {
+				throw new Error(`Unknown letter ${letter}!`);
+			}
 			break;
 		case 'v':
 			ipa += 'v';
