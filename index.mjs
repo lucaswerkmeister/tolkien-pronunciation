@@ -24,7 +24,6 @@ export function pronounceWord(analysedWord, language) {
 			ipa += 'ɑ';
 			break;
 		case 'u':
-		case 'ü':
 			ipa += 'u';
 			break;
 		case 'r':
