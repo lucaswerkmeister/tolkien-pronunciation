@@ -239,6 +239,9 @@ export function pronounceWord(analysedWord, language) {
 			throw new Error(`Unknown letter ${letter}!`);
 		}
 	}
+
+	ipa = ipa.replace(/(.)\1/g, '$1ː');
+
 	return ipa;
 }
 
