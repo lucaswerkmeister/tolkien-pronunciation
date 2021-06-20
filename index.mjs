@@ -73,6 +73,7 @@ export function pronounceWord(analysedWord, language) {
 			} else {
 				throw new Error(`Unknown letter ${letter}!`);
 			}
+			break;
 		case 'f':
 			if (nextLetter === undefined) {
 				ipa += 'v';
