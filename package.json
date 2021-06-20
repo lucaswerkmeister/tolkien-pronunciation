@@ -32,6 +32,6 @@
 		"mocha": "^9.0.0"
 	},
 	"dependencies": {
-		"tolkien-stress": "file:../tolkien-stress"
+		"tolkien-stress": "^0.2.0"
 	}
 }
