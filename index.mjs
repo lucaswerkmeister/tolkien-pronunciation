@@ -1,4 +1,4 @@
-import { analyseText } from 'tolkien-stress/index.mjs';
+import { analyseText } from 'tolkien-stress';
 
 // eslint-disable-next-line no-unused-vars
 export function pronounceWord(analysedWord, language) {
