@@ -3,8 +3,8 @@ import 'chai/register-expect.js';
 
 describe('pronounceWord', () => {
 	const quenyaTestCases = [
-		['E|ä', 'ˈeɑ'],
-		['E|ru', 'ˈeru'],
+		['E|ä', 'ˈɛɑ'],
+		['E|ru', 'ˈɛru'],
 	];
 	const sindarinTestCases = [
 	];
@@ -37,7 +37,7 @@ describe('pronounceText', () => {
 	it('correctly pronounces “Eä.” in Quenya', () => {
 		const ea = 'Eä.';
 		const expected = [
-			'ˈeɑ',
+			'ˈɛɑ',
 			'.',
 		];
 		const actual = pronounceText(ea, 'Quenya');
